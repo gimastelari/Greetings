@@ -1,0 +1,39 @@
+public class Main extends Object
+{
+    public static void main(String args[])
+    {
+        Greeter g;
+        g = new Greeter();
+        
+        String greeting;
+        greeting = g.buildGreeting("Giovanna Mastelari");
+        
+        System.out.println(greeting);
+    }
+}
+
+class Greeter
+{
+    private int id;
+    
+    public void setId(int id_)
+    {
+        id = id_;
+    }
+    
+    public int getId()
+    {
+        return id;
+    }
+    
+    public String buildGreeting(String name)
+    {
+        int nameLength;
+        nameLength = name.length();
+        
+        String tempGreeting;
+        tempGreeting = "Hello, welcome! My name is " + name + ". I am greeter " + id + ".";
+        
+        return tempGreeting + " My name is " + nameLength + " characters long.";
+    }
+}
